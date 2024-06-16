@@ -1,5 +1,5 @@
 import Navbar from "./component/NavBar/navbar";
-import Intro from "./component/NavBar/Intro/intro";
+import Intro from "./component/Intro/intro";
 import Skills from "./component/Skills/skills";
 import Works from "./component/Works/works";
 import Contact from "./component/Contact/contact";
