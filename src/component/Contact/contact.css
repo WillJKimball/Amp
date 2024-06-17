@@ -33,6 +33,17 @@
     min-width: 9rem;
     margin: auto;
     padding: 0.25rem;
+    background-color: aliceblue;
+}
+
+.experienceImg2 {
+    object-fit: cover;
+    height: 7rem;
+    width: 36%;
+    min-width: 9rem;
+    margin: auto;
+    padding: 0.25rem;
+    background-color: aliceblue;
 }
 
 #experience {

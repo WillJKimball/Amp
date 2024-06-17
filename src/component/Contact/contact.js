@@ -1,9 +1,7 @@
 import React, { useRef } from "react";
 import './contact.css';
-import Walmart from '../../assets/walmart.png';
-import Microsoft from '../../assets/microsoft.png';
-import Facebook from '../../assets/facebook.png';
-import Adobe from '../../assets/adobe.png';
+import Dedham from '../../assets/Dedham.png';
+import UVA from '../../assets/UVA.png';
 import FacebookIcon from '../../assets/facebook-icon.png';
 import InstagramIcon from '../../assets/instagram.png';
 import TwitterIcon from '../../assets/twitter.png';
@@ -33,10 +31,8 @@ const Contact = () => {
 
                 </p>
                 <div className="experienceImgs">
-                    <img src={Walmart} alt="Experience" className="experienceImg"/>
-                    <img src={Adobe} alt="Experience" className="experienceImg"/>
-                    <img src={Microsoft} alt="Experience" className="experienceImg"/>
-                    <img src={Facebook} alt="Experience" className="experienceImg"/>
+                    <img src={UVA} alt="Experience" className="experienceImg"/>
+                    <img src={Dedham} alt="Experience" className="experienceImg2"/>
                 </div>
             </div>
             <div id="contact">
