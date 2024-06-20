@@ -47,6 +47,20 @@
     margin-right: 2rem;
 }
 
+.skillBarImg2 {
+    object-fit: cover;
+    height: 4rem;
+    width: 3rem;
+    margin-right: 2rem;
+}
+
+.skillBarImg3 {
+    object-fit: cover;
+    height: 3rem;
+    width: 3rem;
+    margin-right: 2rem;
+}
+
 .skillBarText>p {
     font-size: 1rem;
     font-weight: 200;

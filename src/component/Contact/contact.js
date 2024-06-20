@@ -27,8 +27,11 @@ const Contact = () => {
         <section id='contactPage'>
             <div id="experience">
                 <h1 className="contactPageTitle">My Experience</h1>
-                <p className="experienceDesc"> I have had the opportunity...
-
+                <p className="experienceDesc"> I have had the opportunity to engage in academic research at the University
+                    of Virginia with the statistics departments. I have been involved in researching missingness in edges in networks
+                    in attempts to further understand preferential attachment models. I have also had the opportunity to intern at 
+                    Dedham Savings in data analytics within the commerical lending department, generating significant findings for the 
+                    branch.
                 </p>
                 <div className="experienceImgs">
                     <img src={UVA} alt="Experience" className="experienceImg"/>

@@ -11,7 +11,7 @@ const Works = () => {
     return(
         <section id='works'>
             <h2 className="worksTitle">My Portfolio</h2>
-            <span className="worksDesc">...</span>
+            <span className="worksDesc">The following images provide directions to my projects housed on my github account.</span>
             <div className="worksImgs">
                 <img src={Portfolio1} alt="" className="worksImg"/>
                 <img src={Portfolio2} alt="" className="worksImg"/>
