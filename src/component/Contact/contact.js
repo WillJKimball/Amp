@@ -2,10 +2,9 @@ import React, { useRef } from "react";
 import './contact.css';
 import Dedham from '../../assets/Dedham.png';
 import UVA from '../../assets/UVA.png';
-import FacebookIcon from '../../assets/facebook-icon.png';
-import InstagramIcon from '../../assets/instagram.png';
-import TwitterIcon from '../../assets/twitter.png';
-import YouTubeIcon from '../../assets/youtube.png';
+import LinkedinIcon from '../../assets/linkedin.png';
+import GitHubIcon from '../../assets/github.png';
+import ResumeIcon from '../../assets/resume2.png';
 import emailjs from '@emailjs/browser';
 
 const Contact = () => {
@@ -47,10 +46,15 @@ const Contact = () => {
                     <textarea className="msg" name="message" rows = "5"placeholder="Your Message"/>
                     <button type="submit" value="Send" className="submitBtn">Submit</button>
                     <div className="Links">
-                        <img src={FacebookIcon} alt="FacebookIcon" className="link"/>
-                        <img src={TwitterIcon} alt="Twitter" className="link"/>
-                        <img src={YouTubeIcon} alt="Youtube" className="link"/>
-                        <img src={InstagramIcon} alt="Instagram" className="link"/>
+                        <a href="https://www.linkedin.com/in/will-kimball-6a4198268/" target="_blank" rel="noopener noreferrer">
+                            <img src={LinkedinIcon} alt="Linkedin" className="link"/>
+                        </a>
+                        <a href="https://github.com/WillJKimball?tab=repositories" target="_blank" rel="noopener noreferrer">
+                            <img src={GitHubIcon} alt="GitHub" className="link"/>
+                        </a>
+                        <a href="https://drive.google.com/file/d/1wXXfhTmiuSxxKpBm0k5QhFy9jRe16wG_/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                            <img src={ResumeIcon} alt="Resume" className="link"/>
+                        </a>
                     </div>
                 </form>
             </div>
