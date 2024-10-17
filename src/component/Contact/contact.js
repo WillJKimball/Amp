@@ -52,7 +52,7 @@ const Contact = () => {
                         <a href="https://github.com/WillJKimball?tab=repositories" target="_blank" rel="noopener noreferrer">
                             <img src={GitHubIcon} alt="GitHub" className="link"/>
                         </a>
-                        <a href="https://drive.google.com/file/d/1cTEO89pJKKamGAaTHBNXyG9WykZz8IY7/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
+                        <a href="https://drive.google.com/file/d/1bQWuxhwEaIjd2Os3V0hYssHlwtZgsw1O/view?usp=sharing" target="_blank" rel="noopener noreferrer">
                             <img src={ResumeIcon} alt="Resume" className="link"/>
                         </a>
                     </div>
