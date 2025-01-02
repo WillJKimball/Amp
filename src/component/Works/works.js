@@ -3,6 +3,7 @@ import './works.css';
 import Transformer from '../../assets/bumble.png';
 import Anthony from '../../assets/anthony.png';
 import Clock from '../../assets/clock.png';
+import RunItBack from '../../assets/RunItBack.png';
 
 const Works = () => {
     return(
@@ -16,8 +17,8 @@ const Works = () => {
                 <a href="https://github.com/WillJKimball/CollegetoNBA.git" target="_blank" rel="noopener noreferrer">
                     <img src={Anthony} alt="Project 2" className="worksImg"/>
                 </a>
-                <a href="https://github.com/WillJKimball/ScheduleApp.git" target="_blank" rel="noopener noreferrer">
-                    <img src={Clock} alt="Project 3" className="worksImg"/>
+                <a href="https://drive.google.com/drive/folders/1UWo_gAsyUs1r_EWZHldOqHpd_HLowb8m?usp=drive_link" target="_blank" rel="noopener noreferrer">
+                    <img src={RunItBack} alt="Project 3" className="worksImg"/>
                 </a>
             </div>
             <button className="worksBtn">See More</button>
