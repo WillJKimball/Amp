@@ -3,7 +3,7 @@ import './works.css';
 import Transformer from '../../assets/bumble.png';
 import Anthony from '../../assets/anthony.png';
 import Clock from '../../assets/clock.png';
-import RunItBack from '../../assets/RunItBack.png';
+import RunItBack from '../../assets/RunItBackLogo.jpg';
 
 const Works = () => {
     return(
@@ -21,7 +21,9 @@ const Works = () => {
                     <img src={RunItBack} alt="Project 3" className="worksImg"/>
                 </a>
             </div>
-            <button className="worksBtn">See More</button>
+            <a href="https://github.com/WillJKimball" target="_blank" rel="noopener noreferrer">
+                <button className="worksBtn">See More</button>
+            </a>
         </section>
     );
 }

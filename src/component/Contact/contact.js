@@ -5,6 +5,7 @@ import UVA from '../../assets/UVA.png';
 import LinkedinIcon from '../../assets/linkedin.png';
 import GitHubIcon from '../../assets/github.png';
 import ResumeIcon from '../../assets/resume2.png';
+import QuantumComputing from '../../assets/QCLogo2.png';
 import emailjs from '@emailjs/browser';
 
 const Contact = () => {
@@ -26,17 +27,40 @@ const Contact = () => {
         <section id='contactPage'>
             <div id="experience">
                 <h1 className="contactPageTitle">My Experience</h1>
-                <p className="experienceDesc"> I have had the opportunity to engage in academic research at the University
-                    of Virginia with the statistics departments. I have been involved in researching missingness in edges in networks
-                    in attempts to further understand preferential attachment models. I have also had the opportunity to intern at 
-                    Dedham Savings in data analytics within the commerical lending department, generating significant findings for the 
-                    branch.
+                <p className="experienceDesc">
+                    I have gained valuable experience through academic research and professional internships that have deepened my technical skills and problem-solving abilities.
                 </p>
-                <div className="experienceImgs">
-                    <img src={UVA} alt="Experience" className="experienceImg"/>
-                    <img src={Dedham} alt="Experience" className="experienceImg2"/>
+                <div className="experienceBars">
+                    <div className="experienceBar">
+                        <img src={UVA} alt="University of Virginia Research" className="experienceBarImg" />
+                        <div className="experienceBarText">
+                            <h2>University of Virginia Research</h2>
+                            <p>Conducted academic research under Professor Lubberts focusing on network theory and graph algorithms. Applied Ollivier Ricci curvature and Dijkstra's Algorithm to model and interpret structural gaps caused by missingness in edges within networks.</p>
+                            <p>Ran simulations using Python's NetworkX library to evaluate curvature-based methods for identifying and replacing missing links, contributing to advancements in understanding network structures.</p>
+                        </div>
+                    </div>
+
+                    <div className="experienceBar">
+                        <img src={Dedham} alt="Dedham Institution for Savings Internship" className="experienceBarImg2" />
+                        <div className="experienceBarText">
+                            <h2>Dedham Institution for Savings Internship</h2>
+                            <p>Engineered data pipelines using Python (Pandas, NumPy) to analyze over 1,000 commercial loans, generating data-driven insights for the commercial lending department.</p>
+                            <p>Automated the data refactoring process, achieving a 40% improvement in data accuracy by updating outdated loan information. Designed a dynamic map interface using Django and PostgreSQL to visualize critical loan information in real-time.</p>
+                        </div>
+                    </div>
+
+                    <div className="experienceBar">
+                        <img src={UVA} alt="Continuous Variable Quantum Computing Research" className="experienceBarImg3" />
+                        <div className="experienceBarText">
+                            <h2>Continuous Variable Quantum Computing Research</h2>
+                            <p>Collaborated with Professor Bekiranov at the University of Virginia to design machine learning-driven frameworks aimed at optimizing multimode entanglement in Continuous Variable Quantum Computing (CVQC).</p>
+                            <p>Developed scalable and fault-tolerant models for high-dimensional quantum systems by leveraging quantum systems to train neural networks. This research provides insights into experimental configurations for optical quantum computing.</p>
+                            <p>Engaged in self-study of quantum mechanics through the Feynman Lectures and initiated a Quantum Machine Learning (QML) project focused on identifying leukemia in protein structures using quantum neural networks, integrating quantum theory with real-world healthcare applications.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
+
             <div id="contact">
                 <h1 className="contactPageTitle">Contact Me</h1>
                 <span className="contactDesc">Please fill out the form below to discuss any work opportunities</span>
@@ -52,7 +76,7 @@ const Contact = () => {
                         <a href="https://github.com/WillJKimball?tab=repositories" target="_blank" rel="noopener noreferrer">
                             <img src={GitHubIcon} alt="GitHub" className="link"/>
                         </a>
-                        <a href="https://drive.google.com/file/d/1bQWuxhwEaIjd2Os3V0hYssHlwtZgsw1O/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                        <a href="https://drive.google.com/file/d/1x1hnKZT2iLVQfI2B4qas_aCgLnugAEOd/view?usp=sharing" target="_blank" rel="noopener noreferrer">
                             <img src={ResumeIcon} alt="Resume" className="link"/>
                         </a>
                     </div>

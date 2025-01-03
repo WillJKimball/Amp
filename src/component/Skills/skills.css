@@ -61,6 +61,13 @@
     margin-right: 2rem;
 }
 
+.skillBarImg4 {
+    object-fit: cover;
+    height: 3.5rem;
+    width: 3rem;
+    margin-right: 2rem;
+}
+
 .skillBarText>p {
     font-size: 1rem;
     font-weight: 200;
@@ -82,5 +89,9 @@
     }
     .skillBarText>h2 {
         font-size: 5vw;
+    }
+    .skillBarImg4 {
+        height: 2.25rem;
+        width: 2.25rem;
     }
 }
