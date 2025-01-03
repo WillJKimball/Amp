@@ -27,9 +27,6 @@ const Contact = () => {
         <section id='contactPage'>
             <div id="experience">
                 <h1 className="contactPageTitle">My Experience</h1>
-                <p className="experienceDesc">
-                    I have gained valuable experience through academic research and professional internships that have deepened my technical skills and problem-solving abilities.
-                </p>
                 <div className="experienceBars">
                     <div className="experienceBar">
                         <img src={UVA} alt="University of Virginia Research" className="experienceBarImg" />
