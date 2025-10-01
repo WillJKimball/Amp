@@ -26,33 +26,23 @@ const Contact = () => {
     return(
         <section id='contactPage'>
             <div id="experience">
-                <h1 className="contactPageTitle">My Experience</h1>
+                <h1 className="contactPageTitle">My Research</h1>
                 <div className="experienceBars">
-                    <div className="experienceBar">
-                        <img src={UVA} alt="University of Virginia Research" className="experienceBarImg" />
-                        <div className="experienceBarText">
-                            <h2>University of Virginia Research</h2>
-                            <p>Conducted academic research under Professor Lubberts focusing on network theory and graph algorithms. Applied Ollivier Ricci curvature and Dijkstra's Algorithm to model and interpret structural gaps caused by missingness in edges within networks.</p>
-                            <p>Ran simulations using Python's NetworkX library to evaluate curvature-based methods for identifying and replacing missing links, contributing to advancements in understanding network structures.</p>
-                        </div>
-                    </div>
-
-                    <div className="experienceBar">
-                        <img src={Dedham} alt="Dedham Institution for Savings Internship" className="experienceBarImg2" />
-                        <div className="experienceBarText">
-                            <h2>Dedham Institution for Savings Internship</h2>
-                            <p>Engineered data pipelines using Python (Pandas, NumPy) to analyze over 1,000 commercial loans, generating data-driven insights for the commercial lending department.</p>
-                            <p>Automated the data refactoring process, achieving a 40% improvement in data accuracy by updating outdated loan information. Designed a dynamic map interface using Django and PostgreSQL to visualize critical loan information in real-time.</p>
-                        </div>
-                    </div>
-
                     <div className="experienceBar">
                         <img src={UVA} alt="Continuous Variable Quantum Computing Research" className="experienceBarImg3" />
                         <div className="experienceBarText">
                             <h2>Continuous Variable Quantum Computing Research</h2>
-                            <p>Collaborated with Professor Bekiranov at the University of Virginia to design machine learning-driven frameworks aimed at optimizing multimode entanglement in Continuous Variable Quantum Computing (CVQC).</p>
-                            <p>Developed scalable and fault-tolerant models for high-dimensional quantum systems by leveraging quantum systems to train neural networks. This research provides insights into experimental configurations for optical quantum computing.</p>
+                            <p>Explored quantum computing concepts under Professor Bekiranov at the University of Virginia, studying the mathematics of Continuous Variable Quantum Computing (CVQC) and investigating how machine learning techniques might be applied to problems such as multimode entanglement.</p>
+                            <p>Conducted exploratory research on high-dimensional quantum systems, using linear algebra and simulation tools to understand how quantum principles could inform neural network training and potential applications in optical quantum computing.</p>
                             <p>Engaged in self-study of quantum mechanics through the Feynman Lectures and initiated a Quantum Machine Learning (QML) project focused on identifying leukemia in protein structures using quantum neural networks, integrating quantum theory with real-world healthcare applications.</p>
+                        </div>
+                    </div>
+                    <div className="experienceBar">
+                        <img src={UVA} alt="University of Virginia Research" className="experienceBarImg" />
+                        <div className="experienceBarText">
+                            <h2>Missingness in Neural Networks Research</h2>
+                            <p>Conducted academic research under Professor Lubberts focusing on network theory and graph algorithms. Applied Ollivier Ricci curvature and Dijkstra's Algorithm to model and interpret structural gaps caused by missingness in edges within networks.</p>
+                            <p>Ran simulations using Python's NetworkX library to evaluate curvature-based methods for identifying and replacing missing links, contributing to advancements in understanding network structures.</p>
                         </div>
                     </div>
                 </div>
@@ -73,7 +63,7 @@ const Contact = () => {
                         <a href="https://github.com/WillJKimball?tab=repositories" target="_blank" rel="noopener noreferrer">
                             <img src={GitHubIcon} alt="GitHub" className="link"/>
                         </a>
-                        <a href="https://drive.google.com/file/d/11BEHWXyzyowTwFD1us5wnwHwaNnUVtxp/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                        <a href="https://drive.google.com/file/d/1NZHo0DVEvM3nMe8ScY8H7aoeku8fT0XU/view?usp=sharing" target="_blank" rel="noopener noreferrer">
                             <img src={ResumeIcon} alt="Resume" className="link"/>
                         </a>
                     </div>
