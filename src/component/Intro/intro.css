@@ -1,31 +1,67 @@
 #intro {
     height: calc(100vh - 4rem);
     width: 100vw;
-    max-width: 75rem;
-    margin: 0 auto;
+    margin: 0;
     overflow: hidden;
     position: relative;
-
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .bg {
+    /* Right-side image: occupies about half the intro area */
     position: absolute;
-    top: -4rem;
-    right: 0;
-    z-index: -1;
+    top: 6vw;
+    right: 9vw;
+    z-index: 0;
+    /* keep existing sizing/position exactly as-is; add gradient background
+       so transparent PNG pixels reveal the gradient */
+    background: linear-gradient(135deg, rgba(208,224,255,0.95), rgba(176,210,255,0.95));
+    /* object-fit was previously used on the IMG; the container keeps same box */
     object-fit: cover;
-    height: 100vh;
+    height: 75%;
+    /* reduced width so the portrait appears smaller */
+    width: 35%;
+    /* remove the navy border and instead use the same soft shadow as the
+       intro text card; keep rounded corners and clip the image to them */
+    overflow: hidden;
+    border-radius: 0.75rem;
+    box-shadow: 0 8px 24px rgba(20,40,80,0.08);
+}
+
+/* image inside the .bg container — covers the container and lets its
+   transparent areas show the container background */
+.bgImg {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    background: transparent;
+    /* ensure image corners match the container when rendered */
+    border-radius: 0.75rem;
 }
 
 .introContent {
-    height: 100vh;
-    width: 100vw;
-    padding: 2rem;
+    /* Constrain card to the text content so it doesn't cover the image */
+    /* widened slightly to account for the smaller image */
+    max-width: 54%;
+    width: 45%;
+    margin: 4rem 0 4rem 4rem;
+    padding: 2.5rem 3rem;
     font-size: 3rem;
     font-weight: 700;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: flex-start;
+    /* Rounded blue card around intro text only */
+    background: linear-gradient(180deg, rgba(226,237,255,0.95), rgba(216,229,255,0.92));
+    border-radius: 1rem;
+    box-shadow: 0 8px 24px rgba(20,40,80,0.08);
+    color: var(--text);
+    position: relative;
+    z-index: 1;
 }
 
 .hello {
@@ -34,7 +70,7 @@
 }
 
 .introName {
-    color: rgb(218, 57, 229);
+    color: var(--accent);
 }
 
 .introPara {
@@ -44,6 +80,7 @@
 
 .btn {
     background: white;
+    color: black;
     margin: 1rem 0;
     padding: 0.75rem 1.5rem;
     border: none;
@@ -60,10 +97,16 @@
 
 @media screen and (max-width:840px){
     .bg {
-        right: -10vw;
+        right: -8vw;
+        /* keep it proportionally larger on narrower screens but less aggressive */
+        width: 48%;
     }
     .introContent{
         font-size: 10vw;
+        padding: 2rem;
+        margin: 2rem 1rem;
+        max-width: calc(100% - 2rem);
+        width: auto;
     }
     .hello {
         font-size: 4.5vw;
@@ -73,7 +116,33 @@
 
 @media screen and (max-width:480px){
     .bg {
-        right: -20vw;
+        right: -18vw;
+    }
+}
+
+/* For small screens hide or reduce the image to avoid overlap */
+@media screen and (max-width:720px) {
+    #intro {
+        display: block;
+    }
+    .bg {
+        position: absolute;
+        width: 100%;
+        height: 50vh;
+        top: 0;
+        right: 0;
+        opacity: 0.12;
+        /* disable border on small screens to avoid crowding */
+        border: none;
+        box-shadow: none;
+        z-index: 0;
+    }
+    .introContent {
+        max-width: calc(100% - 2rem);
+        width: auto;
+        margin: 6rem 1rem 1rem 1rem;
+        z-index: 1;
+        background: linear-gradient(180deg, rgba(226,237,255,0.97), rgba(216,229,255,0.95));
     }
 }
 

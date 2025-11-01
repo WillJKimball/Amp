@@ -1,11 +1,9 @@
 import React, { useRef } from "react";
 import './contact.css';
-import Dedham from '../../assets/Dedham.png';
 import UVA from '../../assets/UVA.png';
 import LinkedinIcon from '../../assets/linkedin.png';
 import GitHubIcon from '../../assets/github.png';
 import ResumeIcon from '../../assets/resume2.png';
-import QuantumComputing from '../../assets/QCLogo2.png';
 import emailjs from '@emailjs/browser';
 
 const Contact = () => {

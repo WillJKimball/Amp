@@ -14,7 +14,7 @@
 .skillTitle {
     font-size: 3rem;
     font-weight: 600;
-    padding-top: 3rem;
+    padding-top: 1rem;
     margin-bottom: 1.5rem;
 }
 
@@ -37,7 +37,8 @@
     margin: 1rem;
     padding: 1.5rem 2rem;
     border-radius: 0.5rem;
-    background: rgb(50,50,50);
+    background: var(--card-bg);
+    color: var(--card-text);
 }
 
 .skillBarImg {
@@ -66,6 +67,43 @@
     height: 3.5rem;
     width: 3rem;
     margin-right: 2rem;
+}
+
+/* Icon container to replace photos in skill tiles */
+.skillIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* slightly smaller icon size for a lighter look */
+    height: 2.5rem;
+    width: 2.5rem;
+    margin-right: 1rem;
+    flex: 0 0 2.5rem;
+    /* circular white surface + subtle border to make the icon "pop" */
+    background: var(--card-bg-solid);
+    color: var(--accent);
+    border-radius: 50%;
+    box-shadow: 0 8px 20px rgba(20,40,80,0.08);
+    border: 1px solid rgba(0,0,0,0.04);
+}
+
+.skillIcon svg {
+    width: 60%;
+    height: 60%;
+}
+
+@media screen and (max-width:480px) {
+    .skillIcon {
+        height: 2rem;
+        width: 2rem;
+        flex: 0 0 2rem;
+        margin-right: 0.75rem;
+        box-shadow: 0 6px 16px rgba(20,40,80,0.06);
+    }
+    .skillIcon svg {
+        width: 65%;
+        height: 65%;
+    }
 }
 
 .skillBarText>p {

@@ -7,9 +7,52 @@
     font-family: 'Neuton', sans-serif;
 }
 
+:root{
+    --bg: #f7f7f7; /* page background */
+    --surface: #ffffff; /* cards, panels */
+    --muted-surface: #f2f2f2; /* panels slightly darker than bg */
+    --text: #111111; /* main text */
+    --muted-text: #555555; /* secondary text */
+    --accent: #23407a;
+    /* New block colors: apply to text-block backgrounds */
+    --block-bg: #23407a; /* light navy blue for text blocks */
+    --block-text: #ffffff; /* white text inside text blocks */
+    /* Card (crisper blue) styles - used for UI card backgrounds */
+    --card-bg: linear-gradient(180deg, #dfeeff 0%, #bfe0ff 100%); /* slightly darker, crisper blue */
+    --card-bg-solid: #ffffff;
+    --card-text: var(--text);
+}
+
 body {
-    background: rgb(30,30,30);
-    color: white;
+    background: var(--bg);
+    color: var(--text);
     overflow: hidden;
     overflow-y: scroll;
+}
+
+/* Global button hover/focus styles to give consistent interactive feedback */
+button, .btn, .worksBtn, .submitBtn, .desktopMenuBtn {
+    transition: transform 180ms ease, box-shadow 180ms ease, background-color 180ms ease, filter 180ms ease;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Lift + soft shadow on hover/focus */
+button:hover, .btn:hover, .worksBtn:hover, .submitBtn:hover, .desktopMenuBtn:hover,
+button:focus, .btn:focus, .worksBtn:focus, .submitBtn:focus, .desktopMenuBtn:focus {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(20,40,80,0.08);
+    outline: none;
+}
+
+/* Slight color feedback for common button styles */
+.desktopMenuBtn:hover { background: var(--muted-surface); }
+.btn:hover { filter: brightness(0.95); }
+.worksBtn:hover { filter: brightness(0.97); }
+.submitBtn:hover { filter: brightness(0.95); }
+
+/* Active state (press) */
+button:active, .btn:active, .worksBtn:active, .submitBtn:active, .desktopMenuBtn:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 12px rgba(10,20,40,0.06);
 }
