@@ -1,58 +1,57 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    background: transparent;
-    font-family: 'Neuton', sans-serif;
+* { box-sizing: border-box; }
+
+:root {
+  --cream: #f2efe7;
+  --paper: #fbfaf7;
+  --ink: #102a43;
+  --muted: #5f6c78;
+  --teal: #16756f;
+  --teal-light: #9fd7c9;
+  --orange: #df694a;
+  --line: #d8d4ca;
+  --white: #ffffff;
+  --font-sans: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-display: "DM Serif Display", Georgia, serif;
 }
 
-:root{
-    --bg: #f7f7f7; /* page background */
-    --surface: #ffffff; /* cards, panels */
-    --muted-surface: #f2f2f2; /* panels slightly darker than bg */
-    --text: #111111; /* main text */
-    --muted-text: #555555; /* secondary text */
-    --accent: #23407a;
-    /* New block colors: apply to text-block backgrounds */
-    --block-bg: #23407a; /* light navy blue for text blocks */
-    --block-text: #ffffff; /* white text inside text blocks */
-    /* Card (crisper blue) styles - used for UI card backgrounds */
-    --card-bg: linear-gradient(180deg, #dfeeff 0%, #bfe0ff 100%); /* slightly darker, crisper blue */
-    --card-bg-solid: #ffffff;
-    --card-text: var(--text);
-}
+html { scroll-behavior: smooth; }
 
 body {
-    background: var(--bg);
-    color: var(--text);
-    overflow: hidden;
-    overflow-y: scroll;
+  margin: 0;
+  overflow-x: hidden;
+  background: var(--cream);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
 }
 
-/* Global button hover/focus styles to give consistent interactive feedback */
-button, .btn, .worksBtn, .submitBtn, .desktopMenuBtn {
-    transition: transform 180ms ease, box-shadow 180ms ease, background-color 180ms ease, filter 180ms ease;
-    cursor: pointer;
-    -webkit-tap-highlight-color: transparent;
+button, input, textarea { font: inherit; }
+a { color: inherit; text-decoration: none; }
+p { line-height: 1.72; }
+
+::selection { background: var(--teal-light); color: var(--ink); }
+
+.sectionShell { width: min(1180px, calc(100% - 3rem)); margin: 0 auto; }
+.sectionBlock { padding: clamp(5rem, 9vw, 8rem) 0; }
+.sectionHeading { margin-bottom: clamp(3rem, 6vw, 5rem); }
+.sectionIndex { display: block; margin-bottom: 1.35rem; color: var(--teal); font-size: 0.72rem; font-weight: 800; letter-spacing: 0.15em; }
+.sectionHeading h2, .contactIntro h2 { margin: 0; font-family: var(--font-display); font-size: clamp(2.8rem, 6vw, 5.4rem); font-weight: 400; line-height: 0.98; letter-spacing: -0.035em; }
+.sectionHeading h2 em, .contactIntro h2 em, .heroContent h1 em { color: var(--teal); font-weight: 400; }
+.splitHeading { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(18rem, 0.65fr); gap: 5rem; align-items: end; }
+.splitHeading > p { margin: 0 0 0.5rem; color: var(--muted); font-size: 1.02rem; }
+
+button, .primaryButton, .secondaryButton, .navCta, .emailLink, .githubLink {
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 180ms ease, background 180ms ease, color 180ms ease, border-color 180ms ease;
+}
+button:hover, .primaryButton:hover, .secondaryButton:hover, .navCta:hover, .emailLink:hover, .githubLink:hover { transform: translateY(-2px); }
+:focus-visible { outline: 3px solid var(--orange); outline-offset: 3px; }
+
+@media (max-width: 760px) {
+  .sectionShell { width: min(calc(100% - 2rem), 1180px); }
+  .splitHeading { grid-template-columns: 1fr; gap: 1.5rem; }
 }
 
-/* Lift + soft shadow on hover/focus */
-button:hover, .btn:hover, .worksBtn:hover, .submitBtn:hover, .desktopMenuBtn:hover,
-button:focus, .btn:focus, .worksBtn:focus, .submitBtn:focus, .desktopMenuBtn:focus {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 24px rgba(20,40,80,0.08);
-    outline: none;
-}
-
-/* Slight color feedback for common button styles */
-.desktopMenuBtn:hover { background: var(--muted-surface); }
-.btn:hover { filter: brightness(0.95); }
-.worksBtn:hover { filter: brightness(0.97); }
-.submitBtn:hover { filter: brightness(0.95); }
-
-/* Active state (press) */
-button:active, .btn:active, .worksBtn:active, .submitBtn:active, .desktopMenuBtn:active {
-    transform: translateY(0);
-    box-shadow: 0 4px 12px rgba(10,20,40,0.06);
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
 }

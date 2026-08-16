@@ -1,0 +1,33 @@
+.experienceSection { background: var(--paper); }
+.experienceList { border-top: 1px solid var(--line); }
+.experienceItem {
+  position: relative; display: grid; grid-template-columns: 4rem 12rem minmax(0, 1fr) 2rem;
+  gap: 1.5rem; padding: 2.75rem 0; border-bottom: 1px solid var(--line);
+  transition: background-color 180ms ease;
+}
+.experienceItem:hover { background: rgba(27, 127, 121, 0.035); }
+.experienceNumber { font-family: var(--font-display); font-size: 1.1rem; color: var(--teal); }
+.experienceMeta { display: flex; flex-direction: column; gap: 0.4rem; color: var(--muted); font-size: 0.82rem; line-height: 1.5; }
+.experienceBody h3 { margin: 0; font-family: var(--font-display); font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 400; letter-spacing: -0.02em; }
+.companyName { margin-top: 0.25rem; color: var(--teal); font-weight: 700; }
+.roleSummary { max-width: 46rem; margin: 1.1rem 0 0; font-size: 1.04rem; color: var(--ink); }
+.experienceBody ul { display: grid; gap: 0.65rem; max-width: 50rem; margin: 1.2rem 0 0; padding: 0; list-style: none; color: var(--muted); }
+.experienceBody li { position: relative; padding-left: 1.15rem; }
+.experienceBody li::before { content: ""; position: absolute; left: 0; top: 0.65em; width: 0.35rem; height: 0.35rem; border-radius: 50%; background: var(--orange); }
+.tagRow { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.35rem; }
+.tagRow span { padding: 0.42rem 0.7rem; border: 1px solid var(--line); border-radius: 999px; background: var(--cream); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.04em; }
+.experienceLink { align-self: start; display: grid; place-items: center; margin-top: 0.1rem; width: 2rem; height: 2rem; border-radius: 50%; color: var(--orange); transition: background 180ms ease, color 180ms ease, transform 180ms ease; }
+.experienceLink:hover { background: var(--orange); color: var(--white); transform: translateY(-2px); }
+.experienceArrow { transform: rotate(-45deg); }
+
+@media (max-width: 800px) {
+  .experienceItem { grid-template-columns: 2.5rem minmax(0, 1fr); gap: 1rem; }
+  .experienceMeta, .experienceBody { grid-column: 2; }
+  .experienceMeta { flex-direction: row; justify-content: space-between; }
+  .experienceLink { display: none; }
+}
+@media (max-width: 520px) {
+  .experienceItem { grid-template-columns: 1fr; }
+  .experienceNumber, .experienceMeta, .experienceBody { grid-column: 1; }
+  .experienceNumber { display: none; }
+}

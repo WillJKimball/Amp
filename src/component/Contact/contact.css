@@ -1,202 +1,25 @@
-#contactPage {
-    min-height: calc(100vh - 4rem);
-    width: 100vw;
-    max-width: 60rem;
-    margin: 0 auto;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.contactSection { background: var(--teal); color: var(--white); }
+.contactGrid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(22rem, .72fr); gap: clamp(3rem, 9vw, 8rem); align-items: start; }
+.contactIntro .sectionIndex { color: var(--teal-light); }
+.contactIntro h2 { max-width: 46rem; }
+.contactIntro h2 em { color: var(--teal-light); }
+.contactIntro > p { max-width: 38rem; margin: 1.8rem 0; color: rgba(255,255,255,.72); }
+.emailLink { display: inline-flex; align-items: center; gap: 0.8rem; padding-bottom: 0.45rem; border-bottom: 1px solid rgba(255,255,255,.55); font-weight: 800; }
+.socialLinks { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 3rem; }
+.socialLinks a { display: inline-flex; align-items: center; gap: 0.5rem; color: rgba(255,255,255,.7); font-size: 0.78rem; font-weight: 700; transition: color 180ms ease; }
+.socialLinks a:hover { color: var(--white); }
+.contactForm { display: grid; gap: 1.25rem; padding: clamp(1.5rem, 4vw, 2.3rem); border-radius: 1rem; background: var(--paper); color: var(--ink); box-shadow: 0 30px 70px rgba(8,50,47,.25); }
+.fieldGroup { display: grid; gap: 0.5rem; }
+.fieldGroup label { font-size: 0.7rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
+.fieldGroup input, .fieldGroup textarea { width: 100%; padding: 0.85rem 0; border: 0; border-bottom: 1px solid var(--line); border-radius: 0; outline: 0; background: transparent; color: var(--ink); resize: vertical; }
+.fieldGroup input:focus, .fieldGroup textarea:focus { border-color: var(--teal); }
+.fieldGroup input::placeholder, .fieldGroup textarea::placeholder { color: #8a949b; }
+.submitButton { display: inline-flex; align-items: center; justify-content: space-between; min-height: 3.4rem; margin-top: 0.5rem; padding: 0 1.3rem; border: 0; border-radius: 999px; background: var(--ink); color: var(--white); cursor: pointer; font-size: 0.8rem; font-weight: 800; }
+.submitButton:hover { background: var(--orange); }
+.submitButton:disabled { cursor: wait; opacity: .7; }
+.formStatus { min-height: 1.2rem; font-size: 0.76rem; }
+.formStatus.sent { color: var(--teal); }
+.formStatus.error { color: #a33c2b; }
 
-}
-
-.contactPageTitle {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-}
-
-.experienceDesc {
-    font-weight: 300;
-    font-size: 1rem;
-}
-
-.experienceImgs {
-    margin: 1rem 0;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.experienceImg {
-    object-fit: cover;
-    width: 23%;
-    min-width: 9rem;
-    margin: auto;
-    padding: 0.25rem;
-    background-color: var(--card-bg);
-    color: var(--card-text);
-}
-
-.experienceImg2 {
-    object-fit: cover;
-    height: 7rem;
-    width: 36%;
-    min-width: 9rem;
-    margin: auto;
-    padding: 0.25rem;
-    background-color: var(--card-bg-solid);
-    color: var(--card-text);
-}
-
-#experience {
-    padding: 2rem;
-}
-
-.contactDesc {
-    padding: 1rem;
-    font-size: medium;
-    font-weight: 300;
-}
-
-.contactForm{
-    margin: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 90vw;
-    max-width: 65rem;
-}
-
-.name, .email, .msg {
-    font-size: medium;
-    width: 100%;
-    max-width: 40rem;
-    margin: 0.5rem;
-    padding: 0.5rem 1rem;
-    color: var(--card-text);
-    border: none;
-    border-radius: 0.5rem;
-    background: var(--card-bg);
-}
-
-/* Ensure input/textarea text and placeholders are readable on the card background */
-.contactForm input,
-.contactForm textarea {
-    color: var(--card-text); /* main text color (black) */
-}
-
-.contactForm input::placeholder,
-.contactForm textarea::placeholder {
-    color: rgba(0,0,0,0.55);
-}
-
-/* Vendor fallbacks for older browsers */
-.contactForm input:-ms-input-placeholder,
-.contactForm textarea:-ms-input-placeholder {
-    color: rgba(0,0,0,0.55);
-}
-.contactForm input::-ms-input-placeholder,
-.contactForm textarea::-ms-input-placeholder {
-    color: rgba(0,0,0,0.55);
-}
-
-.submitBtn {
-    background: var(--card-bg);
-    color: var(--card-text);
-    border: none;
-    padding: 0.75rem 3.5rem;
-    border-radius: 0.5rem;
-    margin: 2rem;
-}
-
-.links {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.link {
-    object-fit: cover;
-    height: 3rem;
-    width: 3rem;
-    margin: 0 0.75rem;
-}
-
-.experienceBarImg,
-.experienceBarImg2,
-.experienceBarImg3 {
-    object-fit: cover;
-    margin-bottom: 1.5rem;
-    margin-right: 0;
-    background-color: var(--card-bg-solid);
-    color: var(--card-text);
-    padding: 1rem;
-    border-radius: 0.5rem;
-}
-
-.experienceBarImg {
-    height: 6rem;
-    width: 10rem;
-}
-
-.experienceBarImg2 {
-    height: 6rem;
-    width: 18rem;
-}
-
-.experienceBarImg3 {
-    height: 6rem;
-    width: 10rem;
-    margin-top: 0;
-}
-
-.experienceBar {
-    background: var(--card-bg);
-    color: var(--card-text);
-    border-radius: 0.5rem;
-    padding: 2rem;
-    margin: 1.5rem 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.experienceBarText {
-    flex: 1;
-    width: 100%;
-    text-align: left;
-}
-
-.experienceBarText p {
-    position: relative;
-    padding-left: 1.5rem;
-    margin: 0.75rem 0;
-}
-
-.experienceBarText p::before {
-    content: "•";
-    position: absolute;
-    left: 0;
-    color: var(--card-text);
-    font-size: 1.2rem;
-    line-height: 1;
-}
-
-@media screen and (max-width:480px) {
-    .experienceBarImg,
-    .experienceBarImg2,
-    .experienceBarImg3 {
-        height: 4rem;
-        width: auto;
-        margin-bottom: 1rem;
-        padding: 0.5rem;
-    }
-
-    .experienceBar {
-        padding: 1.5rem;
-    }
-
-    .experienceBarText {
-        margin-top: 0;
-    }
-}
+@media (max-width: 800px) { .contactGrid { grid-template-columns: 1fr; } }
+@media (max-width: 420px) { .emailLink { font-size: 0.8rem; } }

@@ -1,12 +1,14 @@
 import React from "react";
-import './footer.css';
+import "./footer.css";
 
-const Footer = () => {
-    return(
-        <footer className="footer">
-            Copyright &#169; 2025 Will Kimball. All Rights Received.
-        </footer>
-    );
-}
+const Footer = () => (
+  <footer className="footer">
+    <div className="sectionShell footerInner">
+      <span>© {new Date().getFullYear()} Will Kimball</span>
+      <span>AI engineering · Data systems · Product</span>
+      <a href="#intro">Back to top ↑</a>
+    </div>
+  </footer>
+);
 
-export default Footer
+export default Footer;

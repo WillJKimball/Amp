@@ -1,46 +1,60 @@
-import React, {useState} from "react";
-import './navbar.css'
-import logo from '../../assets/WK.png'
-import {Link} from 'react-scroll';
-import contactImg from '../../assets/contact.png'
-import menu from '../../assets/menu.png'
+import React, { useEffect, useState } from "react";
+import "./navbar.css";
+import { Link } from "react-scroll";
+import { FaBars, FaTimes } from "react-icons/fa";
+
+const navItems = [
+  { to: "intro", label: "Home" },
+  { to: "experience", label: "Experience" },
+  { to: "skills", label: "Expertise" },
+  { to: "works", label: "Work" },
+];
 
 const Navbar = () => {
-    const [showMenu, setShowMenu] = useState(false)
-    return(
-        <nav className="navbar">
-            <img src ={logo} alt="Logo" className="logo"/>
-            <div className="desktopMenu">
-                <Link activeClass="active" to="intro" spy={true} smooth={true} offset={-100} duration={500}
-                className="desktopMenuListItem">Home</Link>
-                <Link activeClass="active" to="skills" spy={true} smooth={true} offset={-50} duration={500}
-                className="desktopMenuListItem">About</Link>
-                <Link activeClass="active" to="works" spy={true} smooth={true} offset={-75} duration={500}
-                className="desktopMenuListItem">Portfolio</Link>
-                <Link activeClass="active" to="experience" spy={true} smooth={true} offset={-50} duration={500}
-                className="desktopMenuListItem">Research</Link>
-            </div>
-            <button className="desktopMenuBtn" onClick={() => {
-                document.getElementById('contact').scrollIntoView({behavior: "smooth"})
-            }}>
-                <img src={contactImg} alt="contactImg" className="desktopMenuImg"/>Contact Me</button>
+  const [showMenu, setShowMenu] = useState(false);
 
-            <img src ={menu} alt="Menu" className="mobMenu" onClick={()=> setShowMenu(!showMenu)}/>
-            <div className="navMenu" style={{display: showMenu? 'flex':'none'}}>
-                <Link activeClass="active" to="intro" spy={true} smooth={true} offset={-100} duration={500}
-                className="ListItem" onClick={()=> setShowMenu(false)}>Home</Link>
-                <Link activeClass="active" to="skills" spy={true} smooth={true} offset={-50} duration={500}
-                className="ListItem" onClick={()=> setShowMenu(false)}>About</Link>
-                <Link activeClass="active" to="works" spy={true} smooth={true} offset={-75} duration={500}
-                className="ListItem" onClick={()=> setShowMenu(false)}>Portfolio</Link>
-                <Link activeClass="active" to="experience" spy={true} smooth={true} offset={-50} duration={500}
-                className="ListItem" onClick={()=> setShowMenu(false)}>Experiences</Link>
-                <Link activeClass="active" to="contact" spy={true} smooth={true} offset={-50} duration={500}
-                className="ListItem" onClick={()=> setShowMenu(false)}>Contact</Link>
-            </div>
+  useEffect(() => {
+    const closeOnEscape = (event) => event.key === "Escape" && setShowMenu(false);
+    window.addEventListener("keydown", closeOnEscape);
+    return () => window.removeEventListener("keydown", closeOnEscape);
+  }, []);
 
-        </nav>
-    )
-}
+  return (
+    <header className="siteHeader">
+      <nav className="navbar" aria-label="Primary navigation">
+        <Link className="wordmark" to="intro" smooth duration={500} onClick={() => setShowMenu(false)}>
+          <span>WK</span>
+          <span className="wordmarkText">Will Kimball</span>
+        </Link>
 
-export default Navbar
+        <div className="desktopMenu">
+          {navItems.map((item) => (
+            <Link key={item.to} activeClass="active" to={item.to} spy smooth offset={-90} duration={500} className="desktopMenuListItem">
+              {item.label}
+            </Link>
+          ))}
+        </div>
+
+        <Link className="navCta" to="contact" smooth offset={-70} duration={500}>
+          Let's talk <span aria-hidden="true">↗</span>
+        </Link>
+
+        <button className="mobileMenuButton" type="button" aria-label={showMenu ? "Close navigation" : "Open navigation"} aria-expanded={showMenu} onClick={() => setShowMenu((open) => !open)}>
+          {showMenu ? <FaTimes /> : <FaBars />}
+        </button>
+
+        {showMenu && (
+          <div className="navMenu">
+            {[...navItems, { to: "contact", label: "Contact" }].map((item) => (
+              <Link key={item.to} to={item.to} smooth offset={-80} duration={500} className="mobileNavItem" onClick={() => setShowMenu(false)}>
+                {item.label}
+              </Link>
+            ))}
+          </div>
+        )}
+      </nav>
+    </header>
+  );
+};
+
+export default Navbar;
