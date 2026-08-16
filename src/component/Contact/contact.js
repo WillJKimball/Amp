@@ -30,7 +30,7 @@ const Contact = () => {
           <div className="socialLinks">
             <a href="https://www.linkedin.com/in/william-j-kimball" target="_blank" rel="noopener noreferrer"><FaLinkedinIn /> LinkedIn</a>
             <a href="https://github.com/WillJKimball" target="_blank" rel="noopener noreferrer"><FaGithub /> GitHub</a>
-            <a href="/WilliamKimballResume.pdf" target="_blank" rel="noopener noreferrer"><FaFileAlt /> Résumé</a>
+            <a href="https://drive.google.com/file/d/1GvjmUmF6fFrljEpTVmszV_wiVV-1FbUz/view?usp=sharing" target="_blank" rel="noopener noreferrer"><FaFileAlt /> Résumé</a>
           </div>
         </div>
 

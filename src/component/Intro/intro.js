@@ -21,7 +21,7 @@ const Intro = () => (
           <Link className="primaryButton" to="experience" smooth offset={-80} duration={500}>
             Explore my work <FaArrowDown />
           </Link>
-          <a className="secondaryButton" href="/WilliamKimballResume.pdf" target="_blank" rel="noopener noreferrer">
+          <a className="secondaryButton" href="https://drive.google.com/file/d/1GvjmUmF6fFrljEpTVmszV_wiVV-1FbUz/view?usp=sharing" target="_blank" rel="noopener noreferrer">
             <FaFileAlt /> View résumé
           </a>
         </div>
